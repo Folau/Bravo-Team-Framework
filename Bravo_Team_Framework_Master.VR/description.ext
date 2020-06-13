@@ -1,0 +1,96 @@
+// CONSOLE
+enableDebugConsole[] = {"76561198007179126"}; // Folau
+allowFunctionsLog = 1;
+
+// RESPAWN
+respawnDelay = 10;
+respawn = 3;
+respawnTemplates[] = {"MenuPosition"};
+respawnOnStart = 0;
+
+// AI DISABLE
+disabledAI = 1;
+
+// MISSION DETAILS
+author = "Folau"; // Author
+onLoadName = "Bravo Team Framework"; // Mission name (temporary solution; actual name set in editor will be used later in the alpha)
+onLoadMission = "Framework for Bravo Team members developing missions."; // Description
+// loadScreen = "loadScreen.paa"; // Preview picture // Loadscreen image - comment for default
+// overviewPicture = "loadScreen.paa" // Lobby Image
+
+class Header
+{
+	gameType = Coop; // MP mission type
+};
+
+// GC
+corpseManagerMode = 1; // All
+corpseRemovalMaxTime = 600; // 10m
+wreckManagerMode = 1; // All
+wreckRemovalMaxTime = 900; // 15m
+minPlayerDistance = 50; // 50m
+
+class CfgDebriefing {
+	#include "mission\endings.hpp"
+};
+
+// Mission Parameters
+class Params
+{
+	class f_ParamSpacer_title
+	{
+		title = "---- Mission Options -----";
+		values[] = {-100};
+		texts[] = {" "};
+		default = -100;
+	};
+	class DebugMode
+	{
+		title = "Debug Mode";
+		values[] = {0, 1};
+		texts[] = {"Off", "On"};
+		default = 0;
+	};
+	class f_ParamSpacer_title2
+	{
+		title = "---- AI Options -----";
+		values[] = {-100};
+		texts[] = {" "};
+		default = -100;
+	};
+	class AIVersion
+	{
+		title = "AI Version";
+		values[] = {0,1,};
+		texts[] = {"Vanilla","Reorg-FolAI (Beta 01)"};
+		default = 1;
+	};
+	class Difficulty
+	{
+		title = "AI Difficulty";
+		values[] = {4, 5, 6, 7, 8};
+		texts[] = {"Reserve (0.4)", "Regular (0.5)", "Hardened (0.6)", "Veteren (0.7)", "Elite (0.8)"};
+		default = 5;
+	};	
+	class f_ParamSpacer_title3
+	{
+		title = "---- Immersion Options -----";
+		values[] = {-100};
+		texts[] = {" "};
+		default = -100;
+	};
+	class ShiftClick
+	{
+		title = "Shift Click";
+		values[] = {0, 1};
+		texts[] = {"Off", "On"};
+		default = 0;
+	};
+	class ThirdPerson
+	{
+		title = "Third Person";
+		values[] = {0, 1, 2};
+		texts[] = {"On", "Vehicles Only", "Off"};
+		default = 1;
+	};
+};
