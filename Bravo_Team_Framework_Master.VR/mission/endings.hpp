@@ -1,3 +1,13 @@
+class Endex
+{
+	title = "Endex";
+	// subtitle = "Well Done!";
+	description = "The Commander called for Endex.";
+	// pictureBackground = "";
+	// picture = "";
+	// pictureColor[] = {0.0,0.3,0.6,1};
+};
+
 class End1
 {
 	title = "Mission Complete";

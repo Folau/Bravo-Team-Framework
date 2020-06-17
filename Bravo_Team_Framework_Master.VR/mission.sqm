@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={6211.1982,42.656506,1614.2343};
-		dir[]={0.022730701,-0.87536788,0.48293528};
-		up[]={0.041155908,0.48345995,0.87439734};
-		aside[]={0.99889928,4.4289482e-007,-0.047016293};
+		pos[]={6231.5767,12.825816,1616.6658};
+		dir[]={-0.72180259,-0.40200227,0.56340659};
+		up[]={-0.31690198,0.91563189,0.24736004};
+		aside[]={0.61531389,3.5254925e-007,0.788302};
 	};
 };
 binarizationWanted=0;
@@ -84,16 +84,59 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6224.0376,5.0014391,1618.0282};
+						position[]={6224.0381,5.0014391,1618.0281};
 					};
 					side="Civilian";
 					flags=7;
 					class Attributes
 					{
+						rank="CAPTAIN";
 						isPlayer=1;
 					};
 					id=1;
 					type="C_man_p_beggar_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 			};
 			class Attributes

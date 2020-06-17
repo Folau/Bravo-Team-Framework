@@ -2,6 +2,17 @@
 
 // #Includes for the sections
 // Credits
+if ((rank player) in ['LIEUTENANT', 'CAPTAIN', 'MAJOR', 'COLONEL']) then {
+	#include "7_Endex.sqf"
+	
+	//Spacer
+	_spacer2 = player createDiaryRecord ["diary", ["",""]];
+};
+
+
+
+// #Includes for the sections
+// Credits
 #include "6_Credits.sqf"
 
 //Spacer
