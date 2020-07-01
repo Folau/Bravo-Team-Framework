@@ -20,11 +20,24 @@ if hasInterface then {
 	
 	execVM "f\thirdPerson.sqf";
 	
-	null = execVM "f\clientIntro.sqf";
+	_markerArray = ["respawn_west", "respawn_east", "respawn_guerrila"];
+	
+	for "_i" from 1 to count _markerArray do {
+	
+		_flagMarker = _markerArray select (_i - 1);
+		
+		if (_flagMarker in allMapMarkers) then {
+		
+			_haloPos = getMarkerPos _flagMarker;
+			_haloFlag = "Flag_BI_F" createVehicleLocal _haloPos; 
+			_teleportDeploy = [_haloFlag] execVM "f\teleportDeploy.sqf";
+		};
+	};
 	
 	player addRating 100000;
 	player setSpeaker "NoVoice";
 	
+	null = execVM "f\clientIntro.sqf";	
 };
 
 // Any code to be executed on the server
